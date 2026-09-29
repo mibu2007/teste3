@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nosso Universo ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         VÍDEO DE FUNDO
+    ========================== -->
+
+    <div class="galaxia">
+        <video autoplay muted loop playsinline>
+            <source src="galaxia.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+
+        <div class="escuro"></div>
+    </div>
+
+
+    <!-- =========================
+         CORAÇÕES FLUTUANTES
+    ========================== -->
+
+    <div id="coracoes"></div>
+
+
+    <!-- =========================
+         10 ALIENS ESCONDIDOS
+    ========================== -->
+
+    <div class="alien alien1" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien2" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien3" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien4" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien5" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien6" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien7" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien8" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien9" onclick="encontrarAlien(this)">👽</div>
+    <div class="alien alien10" onclick="encontrarAlien(this)">👽</div>
+
+
+    <!-- =========================
+         MÚSICA
+    ========================== -->
+
+    <audio id="musica" loop>
+        <source src="audio/musica.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         INÍCIO
+    ========================== -->
+
+    <section id="inicio" class="tela ativa">
+
+        <div class="conteudo">
+
+            <img
+                src="imagens/gato.jpg"
+                class="gato"
+                alt="Gato"
+            >
+
+            <h1>Para a dona do meu coração ❤️</h1>
+
+            <p>
+                Não importa o quanto o universo seja vasto,
+                 você ainda é o centro do meu mundo.
+            </p>
+
+            <p>
+                E essa é a nossa história.
+            </p>
+
+            <button onclick="irPara('universo'); iniciarMusica()">
+                Entrar no nosso mundinho ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         UNIVERSO
+    ========================== -->
+
+    <section id="universo" class="tela">
+
+        <button class="voltar" onclick="irPara('inicio')">
+            ← Voltar
+        </button>
+
+        <div class="conteudo">
+
+            <h2>Você é meu universo 🌌</h2>
+
+            <p>
+                Existem bilhões de estrelas no universo,
+                mas nenhuma delas brilha tanto quanto você.
+            </p>
+
+            <p>
+                Cada momento nosso parece fazer parte
+                de uma pequena galáxia que só pertence a nós.
+            </p>
+
+            <button onclick="irPara('momentos')">
+                Nossos momentos ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MOMENTOS
+    ========================== -->
+
+    <section id="momentos" class="tela">
+
+        <button class="voltar" onclick="irPara('universo')">
+            ← Voltar
+        </button>
+
+        <div class="conteudo">
+
+            <h2>Nossos momentos especiais 📸</h2>
+
+            <div class="galeria">
+
+                <img src="imagens/foto1.jpg" alt="Nosso momento">
+
+                <img src="imagens/foto2.jpg" alt="Nosso momento">
+
+                <img src="imagens/foto3.jpg" alt="Nosso momento">
+
+            </div>
+
+            <button onclick="irPara('historia')">
+                Continuar nossa história ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTÓRIA
+    ========================== -->
+
+    <section id="historia" class="tela">
+
+        <button class="voltar" onclick="irPara('momentos')">
+            ← Voltar
+        </button>
+
+        <div class="conteudo">
+
+            <h2>Uma história que ainda está sendo escrita ❤️</h2>
+
+            <p>
+                Se o universo é infinito,
+                então talvez nossa história também seja.
+            </p>
+
+            <p>
+                Quero continuar descobrindo novos lugares,
+                vivendo novos momentos e criando novas
+                memórias para sempre ao seu lado.
+            </p>
+
+            <p>
+                Porque, O amor é a única coisa que
+                 conseguimos perceber que transcende
+                  tempo e espaço.
+            </p>
+
+            <button onclick="irPara('final')">
+                Última parte ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section id="final" class="tela">
+
+        <button class="voltar" onclick="irPara('historia')">
+            ← Voltar
+        </button>
+
+        <div class="conteudo">
+
+            <h2>Você é o meu mundo ❤️</h2>
+
+            <p>
+                Obrigado por fazer parte da minha vida,
+                e estar ao meu lado em todos os momentos.
+                
+            </p>
+
+            <p>
+                Que essa seja apenas uma pequena parte
+                de tudo que ainda vamos viver.
+            </p>
+
+            <div class="grande-coracao">
+                ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EASTER EGG
+    ========================== -->
+
+    <section id="easterEgg">
+
+        <div class="easter-conteudo">
+
+            <h2>
+                nunca esquecerei esse dia que marcou a gente
+            </h2>
+
+            <button onclick="fecharEasterEgg()">
+                ← Voltar
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
